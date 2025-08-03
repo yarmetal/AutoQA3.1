@@ -1,4 +1,4 @@
-
+[![Build status](https://ci.appveyor.com/api/projects/status/tiymp4yk6r42qnbm?svg=true)](https://ci.appveyor.com/project/yarmetal/autoqa3-1)
 
 
 # Домашнее задание к занятию «2.1. Тестирование веб-интерфейсов»
