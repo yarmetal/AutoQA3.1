@@ -35,20 +35,20 @@ class CardTest {
     }
 
     @Test
-    void cardTest1() {
-  driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иванов Иван");
-  driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79998887766");
-  driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
-  driver.findElement(By.className("button")).click();
+    void shouldTestValidName() {
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иванов Иван");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79998887766");
+        driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
+        driver.findElement(By.className("button")).click();
 
-  String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
-  String actual = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
+        String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
+        String actual = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
 
-  assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
-    void cardTest2() {
+    void shouldTestInvalidName() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Ivanov Ivan");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79998887766");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
